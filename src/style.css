@@ -1,18 +1,10 @@
 /* CSS Custom Properties Definitions */
 
 :root {
-  --maxWidth-none: "none";
-  --maxWidth-xs: 20rem;
-  --maxWidth-sm: 24rem;
-  --maxWidth-md: 28rem;
-  --maxWidth-lg: 32rem;
-  --maxWidth-xl: 36rem;
   --maxWidth-2xl: 42rem;
   --maxWidth-3xl: 48rem;
   --maxWidth-4xl: 56rem;
-  --maxWidth-full: "100%";
   --maxWidth-wrapper: var(--maxWidth-2xl);
-  --spacing-px: "1px";
   --spacing-0: 0;
   --spacing-1: 0.25rem;
   --spacing-2: 0.5rem;
@@ -23,10 +15,7 @@
   --spacing-8: 2rem;
   --spacing-10: 2.5rem;
   --spacing-12: 3rem;
-  --spacing-16: 4rem;
-  --spacing-20: 5rem;
-  --spacing-24: 6rem;
-  --spacing-32: 8rem;
+
   --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -41,27 +30,124 @@
   --fontWeight-extrabold: 800;
   --fontWeight-black: 900;
   --fontSize-root: 16px;
-  --lineHeight-none: 1;
-  --lineHeight-tight: 1.1;
   --lineHeight-normal: 1.5;
   --lineHeight-relaxed: 1.625;
-  /* 1.200 Minor Third Type Scale */
-  --fontSize-0: 0.833rem;
+  /* --fontSize-0: 0.833rem; */
   --fontSize-1: 1rem;
   --fontSize-2: 1.2rem;
   --fontSize-3: 1.44rem;
   --fontSize-4: 1.728rem;
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
-  --fontSize-7: 2.986rem;
-  --color-primary: #005b99;
-  --color-text: #2e353f;
+  --fontSize-logo: 4em;
+  --color-primary: #e96900;
+  --color-text: #f9fafb;
   --color-text-light: #4f5969;
-  --color-heading: #1a202c;
-  --color-heading-black: black;
+  --color-heading: #da8d00;
+  --color-heading-black: rgb(230, 76, 4);
   --color-accent: #d1dce5;
 }
+@font-face {
+  font-family: 'maironregular';
+  src: url('fonts/mairon-kyre-webfont.woff2') format('woff2'),
+       url('fonts/mairon-kyre-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 
+}
+.logo {
+  font-family:'maironregular',Arial, sans-serif;
+  font-size: var(--fontSize-logo);
+  font-style: normal;
+  text-decoration: none;
+  background: -webkit-linear-gradient(rgb(251, 156, 2), rgb(226, 93, 4));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+.logo:hover {
+  background: -webkit-linear-gradient(rgb(170, 70, 3), rgb(251, 156, 2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.logo:active {
+  background: -webkit-linear-gradient(rgb(246, 99, 0), rgb(255, 157, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.logo-div {
+  background-image: linear-gradient( #1a202c,#282b31);
+  border-bottom: 3px solid rgb(148, 40, 0);
+  
+  text-align: center;
+  margin: -3.1%;
+  margin-top: -1.7em;
+  line-height: 1.5em;
+  padding: 1em;
+}
+
+.article-title {
+  background: -webkit-linear-gradient(rgb(251, 143, 2), var(--color-heading-black));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer {
+  background-image: linear-gradient(#282b31,#1a202c);
+  border-top: 2px solid rgb(148, 40, 0);
+  text-align: center;
+  margin: -3.1%;
+  margin-bottom: -1.7em;
+}
+
+.index-article {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.index-article p {
+
+  text-align: left;
+}
+
+.article-img {
+  border-radius: 5px;
+  margin: var(--spacing-3);
+}
+
+.bio-mod {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.bio-mod-summary {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--fontSize-0);
+}
+
+.bio-mod-summary p {
+  margin: .25em;
+}
+.bio-mod-summary strong {
+  font-size: var(--fontSize-1);
+}
+
+.index-article-date {
+  text-align: left;
+  margin: var(--spacing-5);
+}
+
+
+/* ================================================== */
+/* ================================================== */
+/* ================================================== */
+/* ================================================== */
+/* ================================================== */
+/* ================================================== */
+/* ================================================== */
+/* ================================================== */
+/* ================================================== */
 /* HTML elements */
 
 *,
@@ -71,6 +157,7 @@
 }
 
 html {
+  background-color: #282b31;
   line-height: var(--lineHeight-normal);
   font-size: var(--fontSize-root);
   -webkit-font-smoothing: antialiased;
@@ -118,9 +205,12 @@ h6 {
 }
 
 h1 {
+  background: -webkit-linear-gradient(rgb(251, 143, 2), var(--color-heading-black));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: var(--fontWeight-black);
   font-size: var(--fontSize-6);
-  color: var(--color-heading-black);
+  color: ;
 }
 
 h2 {
@@ -241,8 +331,12 @@ a:focus {
 /* Custom classes */
 
 .global-wrapper {
+  background-color: #1a202c;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: var(--spacing-0) auto;
-  max-width: var(--maxWidth-wrapper);
+  max-width: var(--maxWidth-4xl);
   padding: var(--spacing-10) var(--spacing-5);
 }
 
@@ -298,8 +392,8 @@ a:focus {
 .bio-avatar {
   margin-right: var(--spacing-4);
   margin-bottom: var(--spacing-0);
-  min-width: 50px;
-  border-radius: 100%;
+  /* min-width: 50px; */
+  border-radius: 15%;
 }
 
 .blog-post header h1 {
@@ -321,7 +415,7 @@ a:focus {
 
 /* Media queries */
 
-@media (max-width: 42rem) {
+@media screen and (min-width: 52em) {
   blockquote {
     padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);
     margin-left: var(--spacing-0);
@@ -329,5 +423,96 @@ a:focus {
   ul,
   ol {
     list-style-position: inside;
+  }
+  .global-wrapper {
+    max-width: var(--maxWidth-4xl);
+  }
+  .logo {
+    font-family:'maironregular',Arial, sans-serif;
+    font-size: var(--fontSize-logo);
+    font-style: normal;
+    text-decoration: none;
+    background: -webkit-linear-gradient(rgb(251, 156, 2), rgb(226, 93, 4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+  }
+  .logo:hover {
+    background: -webkit-linear-gradient(rgb(170, 70, 3), rgb(251, 156, 2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .logo:active {
+    background: -webkit-linear-gradient(rgb(246, 99, 0), rgb(255, 157, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .logo-div {
+    text-align: center;
+    margin: -2.3%;
+    margin-top: -1.1em;
+    line-height: 1.5em;
+    padding: 1em;
+  }
+  
+  .article-title {
+    background: -webkit-linear-gradient(rgb(251, 143, 2), var(--color-heading-black));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: left;
+  }
+  
+  .footer {
+    background-image: linear-gradient(#282b31,#1a202c);
+    border-top: 2px solid rgb(148, 40, 0);
+    text-align: center;
+    margin: -1.1%;
+    margin-bottom: -1.7em;
+    margin-left: -1.2em;
+    margin-right: -1.2em;
+  }
+  
+  .index-article {
+    display: flex;
+    flex-direction: row;
+    margin: var(--spacing-6) ;
+    margin-top:2em;
+    /* text-align: center; */
+  }
+  .index-article p {
+  
+    text-align: left;
+  }
+  
+  .article-img {
+    border-radius: 5px;
+    margin: var(--spacing-3);
+  }
+  
+  .bio-mod {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .bio-mod-summary {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--fontSize-0);
+  }
+  
+  .bio-mod-summary p {
+    margin: .25em;
+  }
+  .bio-mod-summary strong {
+    font-size: var(--fontSize-1);
+  }
+  
+  .index-article-date {
+    text-align: left;
+    margin: var(--spacing-5);
+  }
+  .index-article-summary > h2{
+    text-align: left;
+    margin-top: var(--spacing-4);
   }
 }

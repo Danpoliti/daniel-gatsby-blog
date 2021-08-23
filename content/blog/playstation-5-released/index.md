@@ -1,7 +1,8 @@
 ---
-title: Hello World
-date: "2015-05-01T22:12:03.284Z"
-description: "Hello World"
+title: Playstation 5 finally released, but... already sold out!
+date: "2020-11-20T22:12:03.284Z"
+image: "https://cdn.vox-cdn.com/thumbor/juRVGwRiQktZSjcVo6OTes8bV2A=/0x0:2560x1440/920x613/filters:focal(1076x516:1484x924):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/68614349/3684042F_7745_4036_B068_F1A2F723D0D2.0.jpeg"
+description: "After a long wait and lots of promises, Playstation 5 is finally released... but, already SOLD OUT. If you were not able to buy on the release date you might have to wait a few months. Read the full article..."
 ---
 
 This is my first post on my new fake blog! How exciting!
